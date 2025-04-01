@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hortiprice/components/button/CustomButton.dart';
+import 'package:hortiprice/components/button/customButton.dart';
+import 'package:hortiprice/pages/onboarding/explica%C3%A7%C3%A3o/explicacao_page.dart';
 
 class InicialPage extends StatefulWidget {
   const InicialPage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _InicialPageState extends State<InicialPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(235, 235, 240, 100),
+      backgroundColor: Color.fromRGBO(242, 242, 247, 1),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -20,16 +21,20 @@ class _InicialPageState extends State<InicialPage> {
             Image.asset(
               "./assets/imgs/logo.png",
               fit: BoxFit.contain,
-              height: 240,
-              width: 290,
+              height: 240 * 1.4,
+              width: 290 * 1.4,
             ),
           ]),
+          SizedBox(height: 10),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-            CustomButton(
-              text: "Vamos lá!",
-              onPressed: () {
-                print('Botão 1 pressionado!');
-              },
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 100),
+              child: CustomButton(
+                text: "Vamos lá!",
+                onPressed: () {
+                  Navigator.popAndPushNamed(context, "/explicacao");
+                },
+              ),
             ),
           ]),
         ],

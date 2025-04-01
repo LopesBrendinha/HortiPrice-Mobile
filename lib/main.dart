@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hortiprice/pages/iniciais/inicial/inicial_page.dart';
+import 'package:hortiprice/pages/onboarding/explica%C3%A7%C3%A3o/explicacao_page.dart';
+import 'package:hortiprice/pages/onboarding/inicial/inicial_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: InicialPage(),
-      theme: ThemeData(hintColor: Colors.white),
+      initialRoute: "/",
+      routes: {
+        "/explicacao": (context) => ExplicacaoPage(),
+        "/inicial": (context) => InicialPage(),
+      },
+      theme: ThemeData(fontFamily: "Poppins"),
       debugShowCheckedModeBanner: false,
     );
   }

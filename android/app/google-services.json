@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "433279035778",
+    "project_id": "hortiprice-2431a",
+    "storage_bucket": "hortiprice-2431a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433279035778:android:e81165906751ef4d25479b",
+        "android_client_info": {
+          "package_name": "com.example.hortiprice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvS5uGdbSpg9QnclxXEkjlESK4txUoIh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

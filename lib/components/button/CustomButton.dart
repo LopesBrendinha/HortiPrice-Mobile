@@ -12,26 +12,33 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FilledButton(
+    return ElevatedButton(
       onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        shadowColor: Colors.transparent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+      ),
       child: Container(
           alignment: Alignment.center,
           width: 230,
           height: 55,
           decoration: BoxDecoration(
-            gradient: const LinearGradient(colors: <Color>[
-              Color.fromRGBO(48, 219, 91, 059),
-              Color.fromRGBO(36, 138, 92, 059)
-            ]),
             borderRadius: BorderRadius.circular(20),
+            gradient: const LinearGradient(colors: <Color>[
+              Color.fromRGBO(48, 219, 91, 1),
+              Color.fromRGBO(36, 138, 92, 1)
+            ]),
           ),
           child: Text(
             text,
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Etna',
-              color: Color.fromRGBO(235, 235, 240, 100),
+              fontFamily: 'Poppins-Bold',
+              color: Color.fromRGBO(235, 235, 240, 1),
             ),
           )),
     );
