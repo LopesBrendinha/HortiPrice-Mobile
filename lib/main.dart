@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hortiprice/pages/dashboard/home/home_page.dart';
 import 'package:hortiprice/pages/onboarding/explica%C3%A7%C3%A3o/explicacao_page.dart';
 import 'package:hortiprice/pages/onboarding/inicial/inicial_page.dart';
 
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: InicialPage(),
+      home: //HomePage(),
+          InicialPage(),
       initialRoute: "/",
       routes: {
         "/explicacao": (context) => ExplicacaoPage(),
