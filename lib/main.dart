@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hortiprice/pages/dashboard/home/home_page.dart';
+import 'package:hortiprice/pages/dashboard/simulacoes/simulacoes_page.dart';
 import 'package:hortiprice/pages/onboarding/explica%C3%A7%C3%A3o/explicacao_page.dart';
 import 'package:hortiprice/pages/onboarding/inicial/inicial_page.dart';
 import 'package:hortiprice/pages/signUp&login/cadastro/cadastro_page.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         "/recuperarSenha": (context) => RecuperarsenhaPage(),
         "/senhaNova": (context) => SenhanovaPage(),
         "/home": (context) => HomePage(),
+        "/simulacoes": (context) => SimulacoesPage(),
       },
       theme: ThemeData(fontFamily: "Poppins"),
       debugShowCheckedModeBanner: false,
