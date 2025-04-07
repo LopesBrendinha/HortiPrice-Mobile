@@ -17,17 +17,17 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                './assets/imgs/logout.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.popAndPushNamed(context, "/home");
+                },
+                child: Image.asset(
+                  './assets/imgs/logo.png',
+                  fit: BoxFit.contain,
+                  height: 240 * 0.45,
+                  width: 290 * 0.45,
+                ),
               ),
-              SizedBox(width: 90),
-              Image.asset(
-                './assets/imgs/logo.png',
-                fit: BoxFit.contain,
-                height: 240 * 0.45,
-                width: 290 * 0.45,
-              ),
-              SizedBox(width: 120),
             ],
           ),
           centerTitle: true,
@@ -39,39 +39,39 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                 children: [
                   SizedBox(width: 15),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        'Olá Carlos,',
-                        style: TextStyle(
-                          fontSize: 30,
-                          color: Color.fromRGBO(36, 138, 61, 1),
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      Text(
-                        'O que iremos',
-                        style: TextStyle(
-                          fontSize: 30,
-                          color: Color.fromRGBO(36, 138, 61, 1),
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      Text(
-                        'fazer hoje?',
-                        style: TextStyle(
-                          fontSize: 30,
-                          color: Color.fromRGBO(36, 138, 61, 1),
-                          fontWeight: FontWeight.w700,
-                        ),
+                      Image.asset(
+                        './assets/imgs/pessoa2.png',
                       ),
                     ],
                   ),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset(
-                        './assets/imgs/pessoa1.png',
+                      Text(
+                        'Carlos, qual',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Color.fromRGBO(36, 138, 61, 1),
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        'Simulações ',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Color.fromRGBO(36, 138, 61, 1),
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        'faremos?',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Color.fromRGBO(36, 138, 61, 1),
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ],
                   ),
@@ -109,16 +109,17 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                               height: 130,
                               child: Row(
                                 children: [
-                                  SizedBox(width: 15),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset(
-                                        './assets/imgs/icon1.png',
+                                        './assets/imgs/icon5.png',
+                                        height: 120,
+                                        width: 120,
                                       ),
                                     ],
                                   ),
-                                  SizedBox(width: 33),
+                                  SizedBox(width: 10),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -131,9 +132,9 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                                           ],
                                         ).createShader(bounds),
                                         child: Text(
-                                          'Cadastros',
+                                          'Custeio - ABC',
                                           style: TextStyle(
-                                            fontSize: 25,
+                                            fontSize: 22,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.white,
                                           ),
@@ -165,12 +166,13 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                               height: 130,
                               child: Row(
                                 children: [
-                                  SizedBox(width: 15),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset(
-                                        './assets/imgs/icon2.png',
+                                        './assets/imgs/icon4.png',
+                                        height: 100,
+                                        width: 100,
                                       ),
                                     ],
                                   ),
@@ -187,9 +189,26 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                                           ],
                                         ).createShader(bounds),
                                         child: Text(
-                                          'Simulações',
+                                          'Custeio Por',
                                           style: TextStyle(
-                                            fontSize: 25,
+                                            fontSize: 23,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      ShaderMask(
+                                        shaderCallback: (bounds) =>
+                                            const LinearGradient(
+                                          colors: <Color>[
+                                            Color.fromRGBO(48, 219, 91, 1),
+                                            Color.fromRGBO(36, 138, 92, 1),
+                                          ],
+                                        ).createShader(bounds),
+                                        child: Text(
+                                          'Absorção',
+                                          style: TextStyle(
+                                            fontSize: 23,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.white,
                                           ),
@@ -221,16 +240,17 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                               height: 130,
                               child: Row(
                                 children: [
-                                  SizedBox(width: 15),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset(
-                                        './assets/imgs/icon3.png',
+                                        './assets/imgs/icon6.png',
+                                        height: 100,
+                                        width: 100,
                                       ),
                                     ],
                                   ),
-                                  SizedBox(width: 27),
+                                  SizedBox(width: 33),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -243,9 +263,26 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                                           ],
                                         ).createShader(bounds),
                                         child: Text(
-                                          'Relatórios',
+                                          'Custeio',
                                           style: TextStyle(
-                                            fontSize: 25,
+                                            fontSize: 23,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      ShaderMask(
+                                        shaderCallback: (bounds) =>
+                                            const LinearGradient(
+                                          colors: <Color>[
+                                            Color.fromRGBO(48, 219, 91, 1),
+                                            Color.fromRGBO(36, 138, 92, 1),
+                                          ],
+                                        ).createShader(bounds),
+                                        child: Text(
+                                          'Variavel',
+                                          style: TextStyle(
+                                            fontSize: 23,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.white,
                                           ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hortiprice/pages/dashboard/cadastros/cadastros_page.dart';
 import 'package:hortiprice/pages/dashboard/home/home_page.dart';
+import 'package:hortiprice/pages/dashboard/relatorios/relatorios_page.dart';
 import 'package:hortiprice/pages/dashboard/simulacoes/simulacoes_page.dart';
 import 'package:hortiprice/pages/onboarding/explica%C3%A7%C3%A3o/explicacao_page.dart';
 import 'package:hortiprice/pages/onboarding/inicial/inicial_page.dart';
@@ -19,8 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
-      //InicialPage(),
+      home: LoginPage(),
       initialRoute: "/",
       routes: {
         "/explicacao": (context) => ExplicacaoPage(),
@@ -31,6 +32,8 @@ class MyApp extends StatelessWidget {
         "/senhaNova": (context) => SenhanovaPage(),
         "/home": (context) => HomePage(),
         "/simulacoes": (context) => SimulacoesPage(),
+        "/cadastros": (context) => CadastrosPage(),
+        "/relatorios": (context) => RelatoriosPage(),
       },
       theme: ThemeData(fontFamily: "Poppins"),
       debugShowCheckedModeBanner: false,

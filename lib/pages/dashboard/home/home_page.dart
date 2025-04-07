@@ -91,7 +91,9 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(context, "/cadastros");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
@@ -147,7 +149,9 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(context, "/simulacoes");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
@@ -203,7 +207,9 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(context, "/relatorios");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
