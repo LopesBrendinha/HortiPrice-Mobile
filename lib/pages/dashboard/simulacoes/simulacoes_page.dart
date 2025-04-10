@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hortiprice/components/navBar/customNavBar.dart';
 
 class SimulacoesPage extends StatefulWidget {
   const SimulacoesPage({super.key});
@@ -8,9 +9,11 @@ class SimulacoesPage extends StatefulWidget {
 }
 
 class _SimulacoesPageState extends State<SimulacoesPage> {
+  int _currentPage = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        extendBody: true,
         backgroundColor: Color.fromRGBO(242, 242, 247, 1),
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(242, 242, 247, 1),
@@ -300,6 +303,9 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
               ),
             ],
           ),
+        ),
+        bottomNavigationBar: CustomNavBar(
+          currentPage: _currentPage,
         ));
   }
 }

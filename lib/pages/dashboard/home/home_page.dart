@@ -5,6 +5,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int _currentPage = 0;
+
     return Scaffold(
         backgroundColor: Color.fromRGBO(242, 242, 247, 1),
         appBar: AppBar(
