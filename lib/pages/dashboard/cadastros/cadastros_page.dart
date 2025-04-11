@@ -1,4 +1,3 @@
-import 'package:dot_curved_bottom_nav/dot_curved_bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button_small/customButtonSmall.dart';
 import 'package:hortiprice/components/navBar/customNavBar.dart';
