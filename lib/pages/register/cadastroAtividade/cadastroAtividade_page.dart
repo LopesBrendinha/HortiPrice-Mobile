@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hortiprice/components/button/customButton.dart';
+import 'package:hortiprice/components/inputBar/customInputBar.dart';
 
-class CadastroAtividadePage extends StatefulWidget {
+class CadastroAtividadePage extends StatelessWidget {
   const CadastroAtividadePage({super.key});
 
   @override
-  State<CadastroAtividadePage> createState() => _CadastroAtividadePageState();
-}
-
-class _CadastroAtividadePageState extends State<CadastroAtividadePage> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final TextEditingController _atividade = TextEditingController();
+    return Scaffold();
   }
 }

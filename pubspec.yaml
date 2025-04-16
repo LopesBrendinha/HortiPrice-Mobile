@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   firebase_core: ^3.13.0
   firebase_auth: ^5.5.2
-  crystal_navigation_bar: ^0.0.1
+  dot_navigation_bar:
   
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,4 @@
-import 'package:crystal_navigation_bar/crystal_navigation_bar.dart';
+import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavBar extends StatelessWidget {
@@ -10,6 +10,8 @@ class CustomNavBar extends StatelessWidget {
   }) : super(key: key);
 
   void _handleIndexChanged(BuildContext context, int index) {
+    if (index == currentPage) return;
+
     switch (index) {
       case 0:
         Navigator.popAndPushNamed(context, "/home");
@@ -28,37 +30,51 @@ class CustomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CrystalNavigationBar(
-      currentIndex: currentPage,
-      unselectedItemColor: Colors.white70,
-      backgroundColor: Color.fromRGBO(25, 99, 43, 0.70),
-      outlineBorderColor: Colors.white,
-      onTap: (index) => _handleIndexChanged(context, index),
-      items: [
-        /// Home
-        CrystalNavigationBarItem(
-          icon: Icons.home,
-          selectedColor: Color.fromRGBO(48, 219, 91, 1),
+    return Positioned(
+      bottom: 20,
+      left: 20,
+      right: 20,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.8),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10,
+                offset: Offset(0, 4),
+              ),
+            ],
+          ),
+          child: DotNavigationBar(
+            currentIndex: currentPage,
+            onTap: (index) => _handleIndexChanged(context, index),
+            marginR: const EdgeInsets.symmetric(horizontal: 0),
+            paddingR: const EdgeInsets.symmetric(vertical: 10),
+            backgroundColor: Colors.transparent,
+            dotIndicatorColor: Colors.black,
+            items: [
+              DotNavigationBarItem(
+                icon: Icon(Icons.home),
+                selectedColor: Colors.purple,
+              ),
+              DotNavigationBarItem(
+                icon: Icon(Icons.favorite_border),
+                selectedColor: Colors.pink,
+              ),
+              DotNavigationBarItem(
+                icon: Icon(Icons.search),
+                selectedColor: Colors.orange,
+              ),
+              DotNavigationBarItem(
+                icon: Icon(Icons.person),
+                selectedColor: Colors.teal,
+              ),
+            ],
+          ),
         ),
-
-        /// Simulações
-        CrystalNavigationBarItem(
-          icon: Icons.calculate_outlined,
-          selectedColor: Color.fromRGBO(48, 219, 91, 1),
-        ),
-
-        /// Cadastros
-        CrystalNavigationBarItem(
-          icon: Icons.library_add,
-          selectedColor: Color.fromRGBO(48, 219, 91, 1),
-        ),
-
-        /// Relatórios
-        CrystalNavigationBarItem(
-          icon: Icons.file_copy_outlined,
-          selectedColor: Color.fromRGBO(48, 219, 91, 1),
-        ),
-      ],
+      ),
     );
   }
 }
