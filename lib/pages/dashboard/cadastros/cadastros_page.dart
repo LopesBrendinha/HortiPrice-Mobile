@@ -10,7 +10,7 @@ class CadastrosPage extends StatefulWidget {
 }
 
 class _CadastrosPageState extends State<CadastrosPage> {
-  int _currentPage = 2;
+  int _currentPage = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +104,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Área',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroArea");
+                              },
                             ),
                           ]),
                       SizedBox(width: 10),
@@ -113,7 +116,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Categoria',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroCategoria");
+                              },
                             ),
                           ]),
                     ],
@@ -127,7 +133,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Custo',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroCusto");
+                              },
                             ),
                           ]),
                       SizedBox(width: 10),
@@ -182,7 +191,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Direcionador',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroDirecionador");
+                              },
                             ),
                           ]),
                     ],
@@ -196,7 +208,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Subcategoria',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroSubcategoria");
+                              },
                             ),
                           ]),
                       SizedBox(width: 10),
@@ -205,7 +220,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Unidade',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroUnidade");
+                              },
                             ),
                           ]),
                     ],

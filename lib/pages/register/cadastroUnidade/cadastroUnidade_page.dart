@@ -78,7 +78,7 @@ class CadastroUnidadePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CustomInputBar(
-                  text: 'Área',
+                  text: 'Unidade',
                   largura: 370,
                   icon1: Icons.create_outlined,
                   controller: _unidade,

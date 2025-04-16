@@ -78,7 +78,7 @@ class CadastroCategoriaPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CustomInputBar(
-                  text: 'Área',
+                  text: 'Categoria',
                   largura: 370,
                   icon1: Icons.create_outlined,
                   controller: _categoria,

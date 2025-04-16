@@ -17,10 +17,10 @@ class CustomNavBar extends StatelessWidget {
         Navigator.popAndPushNamed(context, "/home");
         break;
       case 1:
-        Navigator.popAndPushNamed(context, "/simulacoes");
+        Navigator.popAndPushNamed(context, "/cadastros");
         break;
       case 2:
-        Navigator.popAndPushNamed(context, "/cadastros");
+        Navigator.popAndPushNamed(context, "/simulacoes");
         break;
       case 3:
         Navigator.popAndPushNamed(context, "/relatorios");
@@ -44,7 +44,6 @@ class CustomNavBar extends StatelessWidget {
             ),
           ],
         ),
-        // Increased height slightly to accommodate the navigation bar
         height: 70, // Changed from 65 to 70
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
@@ -64,11 +63,11 @@ class CustomNavBar extends StatelessWidget {
                 selectedColor: Color.fromRGBO(48, 219, 91, 1),
               ),
               DotNavigationBarItem(
-                icon: Icon(Icons.computer),
+                icon: Icon(Icons.app_registration_rounded),
                 selectedColor: Color.fromRGBO(48, 219, 91, 1),
               ),
               DotNavigationBarItem(
-                icon: Icon(Icons.app_registration_rounded),
+                icon: Icon(Icons.computer),
                 selectedColor: Color.fromRGBO(48, 219, 91, 1),
               ),
               DotNavigationBarItem(

@@ -9,7 +9,7 @@ class SimulacoesPage extends StatefulWidget {
 }
 
 class _SimulacoesPageState extends State<SimulacoesPage> {
-  int _currentPage = 1;
+  int _currentPage = 2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

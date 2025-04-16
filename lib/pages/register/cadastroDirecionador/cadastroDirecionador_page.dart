@@ -78,7 +78,7 @@ class CadastroDirecionadorPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CustomInputBar(
-                  text: 'Área',
+                  text: 'Direcionador',
                   largura: 370,
                   icon1: Icons.create_outlined,
                   controller: _direcionador,
