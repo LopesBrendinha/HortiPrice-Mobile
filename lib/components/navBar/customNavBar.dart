@@ -2,7 +2,7 @@ import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavBar extends StatelessWidget {
-  final int currentPage; // Recebe o número da página atual
+  final int currentPage;
 
   CustomNavBar({
     Key? key,
@@ -30,46 +30,50 @@ class CustomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 20,
-      left: 20,
-      right: 20,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(30),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.8),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black26,
-                blurRadius: 10,
-                offset: Offset(0, 4),
-              ),
-            ],
-          ),
+    return SafeArea(
+      child: Container(
+        margin: const EdgeInsets.fromLTRB(15, 0, 15, 20),
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(25, 99, 43, 0.75),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black26,
+              blurRadius: 10,
+              offset: Offset(0, 4),
+            ),
+          ],
+        ),
+        // Increased height slightly to accommodate the navigation bar
+        height: 70, // Changed from 65 to 70
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
           child: DotNavigationBar(
             currentIndex: currentPage,
             onTap: (index) => _handleIndexChanged(context, index),
-            marginR: const EdgeInsets.symmetric(horizontal: 0),
-            paddingR: const EdgeInsets.symmetric(vertical: 10),
+            marginR: EdgeInsets.zero,
+            paddingR: const EdgeInsets.symmetric(
+                horizontal: 9, vertical: 0), // Added vertical padding
             backgroundColor: Colors.transparent,
-            dotIndicatorColor: Colors.black,
+            dotIndicatorColor: Color.fromRGBO(48, 219, 91, 1),
+            unselectedItemColor: Colors
+                .grey[300], // Added unselected color for better visibility
             items: [
               DotNavigationBarItem(
                 icon: Icon(Icons.home),
-                selectedColor: Colors.purple,
+                selectedColor: Color.fromRGBO(48, 219, 91, 1),
               ),
               DotNavigationBarItem(
-                icon: Icon(Icons.favorite_border),
-                selectedColor: Colors.pink,
+                icon: Icon(Icons.computer),
+                selectedColor: Color.fromRGBO(48, 219, 91, 1),
               ),
               DotNavigationBarItem(
-                icon: Icon(Icons.search),
-                selectedColor: Colors.orange,
+                icon: Icon(Icons.app_registration_rounded),
+                selectedColor: Color.fromRGBO(48, 219, 91, 1),
               ),
               DotNavigationBarItem(
-                icon: Icon(Icons.person),
-                selectedColor: Colors.teal,
+                icon: Icon(Icons.file_copy),
+                selectedColor: Color.fromRGBO(48, 219, 91, 1),
               ),
             ],
           ),
