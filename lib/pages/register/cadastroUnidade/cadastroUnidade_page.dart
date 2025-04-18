@@ -16,7 +16,9 @@ class CadastroUnidadePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.popAndPushNamed(context, "/cadastros");
+              },
               child: Image.asset(
                 "./assets/imgs/icon12.png",
                 fit: BoxFit.contain,
@@ -46,11 +48,16 @@ class CadastroUnidadePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  './assets/imgs/logo.png',
-                  fit: BoxFit.contain,
-                  height: 240 * 1.1,
-                  width: 290 * 1.1,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.popAndPushNamed(context, "/home");
+                  },
+                  child: Image.asset(
+                    './assets/imgs/logo.png',
+                    fit: BoxFit.contain,
+                    height: 240 * 1.1,
+                    width: 290 * 1.1,
+                  ),
                 ),
               ],
             ),

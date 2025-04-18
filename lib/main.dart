@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         "/cadastros": (context) => CadastrosPage(),
         "/relatorios": (context) => RelatoriosPage(),
         "/cadastroArea": (context) => CadastroAreaPage(),
-        "cadastroAtividade": (context) => CadastroAtividadePage(),
+        "/cadastroAtividade": (context) => CadastroAtividadePage(),
         "/cadastroCategoria": (context) => CadastroCategoriaPage(),
         "/cadastroComponente": (context) => CadastroComponentePage(),
         "/cadastroCusto": (context) => CadastroCustoPage(),

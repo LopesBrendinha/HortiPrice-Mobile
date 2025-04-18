@@ -168,7 +168,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Atividade',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroAtividade");
+                              },
                             ),
                           ]),
                     ],

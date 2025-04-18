@@ -82,7 +82,7 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
               ),
               Container(
                 width: 430.0,
-                height: 494.2,
+                height: 550.2,
                 decoration: BoxDecoration(
                     gradient: const LinearGradient(colors: <Color>[
                       Color.fromRGBO(48, 219, 91, 1),

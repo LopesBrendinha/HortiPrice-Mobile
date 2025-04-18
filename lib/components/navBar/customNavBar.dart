@@ -32,7 +32,7 @@ class CustomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        margin: const EdgeInsets.fromLTRB(15, 0, 15, 20),
+        margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
         decoration: BoxDecoration(
           color: Color.fromRGBO(25, 99, 43, 0.75),
           borderRadius: BorderRadius.circular(20),

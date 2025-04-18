@@ -46,11 +46,16 @@ class CadastroCustoPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  './assets/imgs/logo.png',
-                  fit: BoxFit.contain,
-                  height: 240 * 1.1,
-                  width: 290 * 1.1,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.popAndPushNamed(context, "/home");
+                  },
+                  child: Image.asset(
+                    './assets/imgs/logo.png',
+                    fit: BoxFit.contain,
+                    height: 240 * 1.1,
+                    width: 290 * 1.1,
+                  ),
                 ),
               ],
             ),
