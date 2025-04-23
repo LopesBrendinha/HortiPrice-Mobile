@@ -16,7 +16,9 @@ class CadastroCustoPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.popAndPushNamed(context, "/cadastros");
+              },
               child: Image.asset(
                 "./assets/imgs/icon12.png",
                 fit: BoxFit.contain,

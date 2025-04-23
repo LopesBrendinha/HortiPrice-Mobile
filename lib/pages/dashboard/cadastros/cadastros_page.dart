@@ -145,7 +145,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Produtividade',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroProdutividade");
+                              },
                             ),
                           ]),
                     ],
@@ -159,7 +162,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Tipo',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroTipo");
+                              },
                             ),
                           ]),
                       SizedBox(width: 10),
@@ -185,7 +191,10 @@ class _CadastrosPageState extends State<CadastrosPage> {
                           children: [
                             CustomButtonSmall(
                               text: 'Componente',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.popAndPushNamed(
+                                    context, "/cadastroComponente");
+                              },
                             ),
                           ]),
                       SizedBox(width: 10),

@@ -15,7 +15,7 @@ class _CadastroAtividadePageState extends State<CadastroAtividadePage> {
   final TextEditingController _quantidade = TextEditingController();
   String? custo = 'Opção 1';
   String? unidade = 'Opção 2';
-  String? quantidade = 'Opção 3';
+  String? direcionador = 'Opção 3';
 
   @override
   Widget build(BuildContext context) {
@@ -107,13 +107,16 @@ class _CadastroAtividadePageState extends State<CadastroAtividadePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                CustomInputBar(
-                  text: 'Quantidade',
+                CustomInputSelectBar(
+                  text: 'Direcionador',
                   largura: 370,
-                  icon1: Icons.create_outlined,
-                  controller: _quantidade,
-                  obscure: false,
-                  showEyeIcon: false,
+                  selectedValue: direcionador,
+                  items: ['Opção 1', 'Opção 2', 'Opção 3'],
+                  onChanged: (newValue) {
+                    setState(() {
+                      direcionador = newValue;
+                    });
+                  },
                 ),
               ],
             ),
@@ -146,7 +149,7 @@ class _CadastroAtividadePageState extends State<CadastroAtividadePage> {
                       items: ['Opção 1', 'Opção 2', 'Opção 3'],
                       onChanged: (newValue) {
                         setState(() {
-                          custo = newValue;
+                          unidade = newValue;
                         });
                       },
                     ),
@@ -158,16 +161,13 @@ class _CadastroAtividadePageState extends State<CadastroAtividadePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                CustomInputSelectBar(
+                CustomInputBar(
                   text: 'Quantidade',
                   largura: 370,
-                  selectedValue: quantidade,
-                  items: ['Opção 1', 'Opção 2', 'Opção 3'],
-                  onChanged: (newValue) {
-                    setState(() {
-                      custo = newValue;
-                    });
-                  },
+                  icon1: Icons.create_outlined,
+                  controller: _quantidade,
+                  obscure: false,
+                  showEyeIcon: false,
                 ),
               ],
             ),
