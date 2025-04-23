@@ -99,7 +99,10 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(
+                                  context, "/simulacaoCustoABC");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
@@ -156,7 +159,10 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(
+                                  context, "/simulacaoCustoPorAbsorcao");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
@@ -230,7 +236,10 @@ class _SimulacoesPageState extends State<SimulacoesPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(
+                                  context, "/simulacaoCustoVariavel");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,

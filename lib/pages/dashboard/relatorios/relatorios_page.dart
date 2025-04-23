@@ -99,7 +99,10 @@ class _RelatoriosPageState extends State<RelatoriosPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(
+                                  context, "/relatorioCustoABC");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
@@ -156,7 +159,10 @@ class _RelatoriosPageState extends State<RelatoriosPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(
+                                  context, "/relatorioCustoVariavel");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
@@ -209,7 +215,7 @@ class _RelatoriosPageState extends State<RelatoriosPage> {
                                           ],
                                         ).createShader(bounds),
                                         child: Text(
-                                          'Unitario',
+                                          'Variavel',
                                           style: TextStyle(
                                             fontSize: 23,
                                             fontWeight: FontWeight.w700,
@@ -230,7 +236,10 @@ class _RelatoriosPageState extends State<RelatoriosPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(
+                                  context, "/relatorioCustoPorAbsorcao");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
@@ -266,7 +275,7 @@ class _RelatoriosPageState extends State<RelatoriosPage> {
                                           ],
                                         ).createShader(bounds),
                                         child: Text(
-                                          'Custo de',
+                                          'Custo Por',
                                           style: TextStyle(
                                             fontSize: 23,
                                             fontWeight: FontWeight.w700,
@@ -283,7 +292,7 @@ class _RelatoriosPageState extends State<RelatoriosPage> {
                                           ],
                                         ).createShader(bounds),
                                         child: Text(
-                                          'Produção',
+                                          'Absorção',
                                           style: TextStyle(
                                             fontSize: 23,
                                             fontWeight: FontWeight.w700,
@@ -304,7 +313,10 @@ class _RelatoriosPageState extends State<RelatoriosPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.popAndPushNamed(
+                                  context, "/relatorioTotaisCustos");
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(242, 242, 247, 1),
                               shadowColor: Colors.transparent,
