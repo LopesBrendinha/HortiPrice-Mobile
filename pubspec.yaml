@@ -37,6 +37,8 @@ dependencies:
   firebase_core: ^3.13.0
   firebase_auth: ^5.5.2
   dot_navigation_bar:
+  flutter_native_splash: ^2.2.9
+  quickalert: ^1.0.0
   
 dev_dependencies:
   flutter_test:
@@ -52,6 +54,14 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+flutter_native_splash:
+  color: "#F2F2F7"
+  image: assets/imgs/logo.png
+  android: true
+  android_12:
+    color: "#F2F2F7"
+    image: assets/imgs/logo.png
+    icon_background_color: "#F2F2F7"
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -63,6 +73,8 @@ flutter:
   
   assets:
    - assets/imgs/
+   - assets/imgs/logo.png
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
