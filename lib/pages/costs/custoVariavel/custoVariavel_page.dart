@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
 import 'package:hortiprice/components/inputSelectBar/customInputSelectBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CustovariavelPage extends StatefulWidget {
   const CustovariavelPage({super.key});
@@ -72,7 +73,15 @@ class _CustovariavelPageState extends State<CustovariavelPage> {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'Custeio Variável',
+                  text:
+                      'O Custeio Variável considera apenas os custos relacionados ao volume de produção, permitindo calcular a margem de contribuição com base nos custos variáveis e na receita líquida. Para simular, acesse Simulações > Custeio Variável e informe tipo, produtividade e margem de contribuição.',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

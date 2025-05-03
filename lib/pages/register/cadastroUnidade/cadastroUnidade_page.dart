@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CadastroUnidadePage extends StatelessWidget {
   const CadastroUnidadePage({super.key});
@@ -26,7 +27,15 @@ class CadastroUnidadePage extends StatelessWidget {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'O que é a Unidade?',
+                  text:
+                      'Descrição das unidades de medidas que serão utilizadas na inserção dos componentes de custo (ex.: kg/ha, R\$/ha, h/m, etc.).',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

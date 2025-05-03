@@ -103,7 +103,7 @@ class _ExplicacaoPageState extends State<ExplicacaoPage> {
                             curve: Curves.bounceInOut);
                         setState(() {});
                       } else {
-                        Navigator.popAndPushNamed(context, "/inicial");
+                        Navigator.popAndPushNamed(context, "/login");
                       }
                     },
                   ),

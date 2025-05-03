@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CadastroDirecionadorPage extends StatelessWidget {
   const CadastroDirecionadorPage({super.key});
@@ -24,7 +25,15 @@ class CadastroDirecionadorPage extends StatelessWidget {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'O que é o Direcionador?',
+                  text:
+                      'Direcionadores são fatores ou variáveis que influenciam o custo de uma atividade ou processo. Eles são utilizados para medir e alocar custos de maneira mais precisa.',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

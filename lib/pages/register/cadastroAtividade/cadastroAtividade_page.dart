@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
 import 'package:hortiprice/components/inputSelectBar/customInputSelectBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CadastroAtividadePage extends StatefulWidget {
   const CadastroAtividadePage({super.key});
@@ -37,7 +38,15 @@ class _CadastroAtividadePageState extends State<CadastroAtividadePage> {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'O que é a Atividade?',
+                  text:
+                      'Refere-se a uma ação ou conjunto de ações realizadas durante o processo de produção agrícola que gera custos e contribui para a formação do preço de venda dos produtos hortícolas.',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

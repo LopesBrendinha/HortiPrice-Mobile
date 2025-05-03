@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
 import 'package:hortiprice/components/inputSelectBar/customInputSelectBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CustoabcPage extends StatefulWidget {
   const CustoabcPage({super.key});
@@ -72,7 +73,15 @@ class _CustoabcPageState extends State<CustoabcPage> {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'Custeio ABC',
+                  text:
+                      'O Custeio Baseado em Atividades (ABC) identifica atividades e direcionadores para alocar custos de forma mais precisa. Para simular, acesse Simulações > Custeio ABC e informe tipo, produtividade e margem de contribuição.',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

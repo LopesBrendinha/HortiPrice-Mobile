@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CadastroAreaPage extends StatelessWidget {
   const CadastroAreaPage({super.key});
@@ -26,7 +27,15 @@ class CadastroAreaPage extends StatelessWidget {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'O que é a Área?',
+                  text:
+                      'A área representa um segmento específico da agricultura, como horticultura, fruticultura, olericultura, floricultura, entre outros. Cada uma dessas áreas possui características únicas, práticas de cultivo e demandas de mercado.',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

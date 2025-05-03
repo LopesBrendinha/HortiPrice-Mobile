@@ -24,7 +24,7 @@ class _RecuperarsenhaPageState extends State<RecuperarsenhaPage> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, "/login");
+                  Navigator.popAndPushNamed(context, "/login");
                 },
                 child: Image.asset(
                   "./assets/imgs/logo.png",

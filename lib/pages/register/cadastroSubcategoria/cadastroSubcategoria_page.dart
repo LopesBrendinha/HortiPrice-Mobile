@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CadastroSubcategoriaPage extends StatelessWidget {
   const CadastroSubcategoriaPage({super.key});
@@ -26,7 +27,15 @@ class CadastroSubcategoriaPage extends StatelessWidget {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'O que é a Subcategoria?',
+                  text:
+                      'Descrição da(s) divisão(s) da categoria informada anteriormente (ex.: Floricultura, Olericultura, Fruticultura, etc.).',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

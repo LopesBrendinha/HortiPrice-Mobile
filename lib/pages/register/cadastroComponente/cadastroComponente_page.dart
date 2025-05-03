@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
 import 'package:hortiprice/components/inputSelectBar/customInputSelectBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CadastroComponentePage extends StatefulWidget {
   const CadastroComponentePage({super.key});
@@ -84,7 +85,15 @@ class _CadastroComponentePageState extends State<CadastroComponentePage> {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'O que é o Componente?',
+                  text:
+                      'Descrição das informações relacionadas aos custos envolvidos no processo produtivo de determinado cultivo (ex.: Custo do Veículo, Mão de obra, Fertilizantes, etc.).',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

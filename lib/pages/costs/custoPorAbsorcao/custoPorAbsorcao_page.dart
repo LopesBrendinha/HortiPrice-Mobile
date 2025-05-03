@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
 import 'package:hortiprice/components/inputSelectBar/customInputSelectBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CustoporabsorcaoPage extends StatefulWidget {
   const CustoporabsorcaoPage({super.key});
@@ -72,7 +73,15 @@ class _CustoporabsorcaoPageState extends State<CustoporabsorcaoPage> {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'Custeio por absorção',
+                  text:
+                      'O Custeio por Absorção considera todos os custos de produção (diretos, indiretos, fixos e variáveis). Para simular, acesse Simulações > Custeio por Absorção e informe tipo, produtividade e margem de contribuição.',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,

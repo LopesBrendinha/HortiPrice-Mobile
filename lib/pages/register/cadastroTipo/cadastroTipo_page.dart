@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/customButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
 import 'package:hortiprice/components/inputSelectBar/customInputSelectBar.dart';
+import 'package:quickalert/quickalert.dart';
 
 class CadastroTipoPage extends StatefulWidget {
   const CadastroTipoPage({super.key});
@@ -49,7 +50,15 @@ class _CadastroTipoPageState extends State<CadastroTipoPage> {
             ),
             SizedBox(width: 290),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.info,
+                  title: 'O que é o Tipo?',
+                  text:
+                      'Nome da cultura (ex.: Alho Irrigado, Morango, Rosa, etc.).',
+                );
+              },
               child: Image.asset(
                 "./assets/imgs/icon11.png",
                 fit: BoxFit.contain,
