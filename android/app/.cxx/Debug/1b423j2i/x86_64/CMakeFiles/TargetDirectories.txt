@@ -1,0 +1,2 @@
+C:/Users/brend/OneDrive/Desktop/Faculdade/TCC/HortiPrice-Mobile/android/app/.cxx/Debug/1b423j2i/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/brend/OneDrive/Desktop/Faculdade/TCC/HortiPrice-Mobile/android/app/.cxx/Debug/1b423j2i/x86_64/CMakeFiles/rebuild_cache.dir

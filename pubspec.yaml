@@ -39,7 +39,7 @@ dependencies:
   dot_navigation_bar:
   flutter_native_splash: ^2.2.9
   quickalert: ^1.0.0
-  
+  sign_button: ^2.0.6
 dev_dependencies:
   flutter_test:
     sdk: flutter

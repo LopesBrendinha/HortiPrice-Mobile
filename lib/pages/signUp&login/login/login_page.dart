@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hortiprice/components/button/customButton.dart';
+import 'package:hortiprice/components/button/CustomButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
+import 'package:sign_button/constants.dart';
+import 'package:sign_button/create_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -76,23 +78,106 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             SizedBox(height: 20),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-              CustomButton(
-                text: "Entrar",
-                onPressed: () {
-                  Navigator.popAndPushNamed(context, "/home");
-                },
-              ),
-            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CustomButton(
+                        text: "Entrar",
+                        onPressed: () {
+                          Navigator.popAndPushNamed(context, "/home");
+                        },
+                        width: 157,
+                      ),
+                    ]),
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.popAndPushNamed(context, "/cadastro");
+                        },
+                        child: Container(
+                          width: 157,
+                          height: 55,
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                              colors: [
+                                Color.fromRGBO(48, 219, 91, 1),
+                                Color.fromRGBO(36, 138, 92, 1)
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Container(
+                            margin: const EdgeInsets.all(3), 
+                            decoration: BoxDecoration(
+                              color: const Color.fromRGBO(
+                                  235, 235, 240, 1), 
+                              borderRadius: BorderRadius.circular(17),
+                            ),
+                            alignment: Alignment.center,
+                            child: ShaderMask(
+                              shaderCallback: (bounds) => const LinearGradient(
+                                colors: [
+                                  Color.fromRGBO(48, 219, 91, 1),
+                                  Color.fromRGBO(36, 138, 92, 1),
+                                ],
+                              ).createShader(bounds),
+                              blendMode: BlendMode.srcIn,
+                              child: const Text(
+                                'Cadastrar',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins-Bold',
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+              ],
+            ),
             SizedBox(height: 20),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-              CustomButton(
-                text: "Criar Conta",
-                onPressed: () {
-                  Navigator.popAndPushNamed(context, "/cadastro");
-                },
-              ),
-            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Ou através das redes sociais',
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Color.fromRGBO(48, 219, 91, 1),
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SignInButton.mini(
+                        buttonType: ButtonType.google,
+                        onPressed: () {},
+                      ),
+                    ]),
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SignInButton.mini(
+                        buttonType: ButtonType.facebook,
+                        onPressed: () {},
+                      ),
+                    ]),
+              ],
+            ),
           ],
         ),
       ),
