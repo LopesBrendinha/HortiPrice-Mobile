@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hortiprice/pages/costs/custoABC/custoABC_page.dart';
 import 'package:hortiprice/pages/costs/custoPorAbsorcao/custoPorAbsorcao_page.dart';
@@ -26,9 +27,19 @@ import 'package:hortiprice/pages/signUp&login/cadastro/cadastro_page.dart';
 import 'package:hortiprice/pages/signUp&login/login/login_page.dart';
 import 'package:hortiprice/pages/signUp&login/recuperarSenha/recuperarSenha_page.dart';
 import 'package:hortiprice/pages/signUp&login/senhaNova/senhaNova_page.dart';
+import 'package:hortiprice/service/auth_service.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  await Firebase.initializeApp();
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthService()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

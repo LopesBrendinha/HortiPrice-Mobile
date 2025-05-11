@@ -14,8 +14,16 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    final formKey = GlobalKey<FormState>();
     final TextEditingController _email = TextEditingController();
     final TextEditingController _senha = TextEditingController();
+
+    bool isLogin = true;
+
+    @override
+    void initState() {
+      super.initState();
+    }
 
     return Scaffold(
       backgroundColor: Color.fromRGBO(242, 242, 247, 1),
@@ -32,31 +40,40 @@ class _LoginPageState extends State<LoginPage> {
                 width: 290 * 1.1,
               ),
             ]),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                CustomInputBar(
-                  text: 'Email',
-                  largura: 370,
-                  icon1: Icons.email_rounded,
-                  controller: _email,
-                  obscure: false,
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                CustomInputBar(
-                  text: 'Senha',
-                  largura: 370,
-                  icon1: Icons.lock,
-                  controller: _senha,
-                  obscure: true,
-                  showEyeIcon: true,
-                ),
-              ],
+            Form(
+              key: formKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CustomInputBar(
+                        text: 'Email',
+                        largura: 370,
+                        icon1: Icons.email_rounded,
+                        controller: _email,
+                        obscure: false,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CustomInputBar(
+                        text: 'Senha',
+                        largura: 370,
+                        icon1: Icons.lock,
+                        controller: _senha,
+                        obscure: true,
+                        showEyeIcon: true,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                ],
+              ),
             ),
             SizedBox(height: 20),
             Row(
@@ -112,10 +129,9 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Container(
-                            margin: const EdgeInsets.all(3), 
+                            margin: const EdgeInsets.all(3),
                             decoration: BoxDecoration(
-                              color: const Color.fromRGBO(
-                                  235, 235, 240, 1), 
+                              color: const Color.fromRGBO(235, 235, 240, 1),
                               borderRadius: BorderRadius.circular(17),
                             ),
                             alignment: Alignment.center,
