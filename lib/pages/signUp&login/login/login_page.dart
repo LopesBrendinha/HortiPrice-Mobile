@@ -48,12 +48,46 @@ class _LoginPageState extends State<LoginPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      CustomInputBar(
-                        text: 'Email',
-                        largura: 370,
-                        icon1: Icons.email_rounded,
-                        controller: _email,
-                        obscure: false,
+                      Container(
+                        height: 55,
+                        width: 370,
+                        child: TextFormField(
+                          controller: _email,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Color.fromRGBO(174, 174, 178, 1.00),
+                          ),
+                          decoration: InputDecoration(
+                            labelText: 'Email',
+                            labelStyle: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Color.fromRGBO(174, 174, 178, 1.00),
+                            ),
+                            prefixIcon:Icon(
+                              Icons.email_rounded,
+                              color: Color.fromRGBO(174, 174, 178, 1.00),
+                            ), 
+                            fillColor: Color.fromRGBO(235, 235, 240, 1),
+                            filled: true,
+                            focusedBorder: InputBorder.none,
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.transparent, width: 1.0),
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                          ),
+                          keyboardType: TextInputType.emailAddress,
+                          validator: (value){
+                            if(value!.isEmpty){
+                              return "Informe Seu email corretamente!";
+                            }else{
+                              return null;
+                            }
+
+                          },
+                        ),
                       ),
                     ],
                   ),

@@ -31,7 +31,7 @@ import 'package:hortiprice/service/auth_service.dart';
 import 'package:provider/provider.dart';
 
 void main() async{
-  await Firebase.initializeApp();
+  //await Firebase.initializeApp();
   runApp(
     MultiProvider(
       providers: [
@@ -45,12 +45,11 @@ void main() async{
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: InicialPage(),
-      initialRoute: "/",
+      initialRoute: "/login",
       routes: {
         "/explicacao": (context) => ExplicacaoPage(),
         "/inicial": (context) => InicialPage(),
