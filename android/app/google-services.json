@@ -12,7 +12,12 @@
           "package_name": "com.example.hortiprice"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "433279035778-5b90qadbv5mel9mebcmahv00tlkimub4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDvS5uGdbSpg9QnclxXEkjlESK4txUoIh4"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433279035778-5b90qadbv5mel9mebcmahv00tlkimub4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "433279035778-f9162n1u6ck7vsin9jcqiscajuf63nd1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hortiprice"
+              }
+            }
+          ]
         }
       }
     }

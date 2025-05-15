@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hortiprice/components/button/CustomButton.dart';
 import 'package:hortiprice/components/inputBar/customInputBar.dart';
+import 'package:hortiprice/service/auth_service.dart';
+import 'package:provider/provider.dart';
 import 'package:sign_button/constants.dart';
 import 'package:sign_button/create_button.dart';
 
@@ -18,12 +20,15 @@ class _LoginPageState extends State<LoginPage> {
     final TextEditingController _email = TextEditingController();
     final TextEditingController _senha = TextEditingController();
 
-    bool isLogin = true;
-
-    @override
-    void initState() {
-      super.initState();
+    login( ) async{
+      try{
+        await context.read<AuthService>().login(_email.text, _senha.text);
+      }on AuthException catch(e){
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+      }
     }
+
+    
 
     return Scaffold(
       backgroundColor: Color.fromRGBO(242, 242, 247, 1),
@@ -138,6 +143,9 @@ class _LoginPageState extends State<LoginPage> {
                       CustomButton(
                         text: "Entrar",
                         onPressed: () {
+                          if(formKey.currentState!.validate()){
+                            login();
+                          }
                           Navigator.popAndPushNamed(context, "/home");
                         },
                         width: 157,

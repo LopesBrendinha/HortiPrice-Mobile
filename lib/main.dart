@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:hortiprice/firebase_options.dart';
 import 'package:hortiprice/pages/costs/custoABC/custoABC_page.dart';
 import 'package:hortiprice/pages/costs/custoPorAbsorcao/custoPorAbsorcao_page.dart';
 import 'package:hortiprice/pages/costs/custoVariavel/custoVariavel_page.dart';
@@ -31,7 +32,10 @@ import 'package:hortiprice/service/auth_service.dart';
 import 'package:provider/provider.dart';
 
 void main() async{
-  //await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     MultiProvider(
       providers: [
@@ -40,6 +44,7 @@ void main() async{
       child: MyApp(),
     ),
   );
+
 }
 
 class MyApp extends StatelessWidget {
@@ -49,7 +54,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: InicialPage(),
-      initialRoute: "/login",
+      initialRoute: "/inicial",
       routes: {
         "/explicacao": (context) => ExplicacaoPage(),
         "/inicial": (context) => InicialPage(),

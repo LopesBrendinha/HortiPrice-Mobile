@@ -101,7 +101,6 @@ class _ExplicacaoPageState extends State<ExplicacaoPage> {
                         controller.animateToPage(selectPage,
                             duration: const Duration(milliseconds: 600),
                             curve: Curves.bounceInOut);
-                        setState(() {});
                       } else {
                         Navigator.popAndPushNamed(context, "/login");
                       }
