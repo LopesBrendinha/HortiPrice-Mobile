@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "327897573367",
+    "project_id": "hortiprice-mobile",
+    "storage_bucket": "hortiprice-mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327897573367:android:f7e7b45f0eaae0109ef0f2",
+        "android_client_info": {
+          "package_name": "com.android.hortiprice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvRg-Y7Fl-NjFDJ7xB_nPVClYP5-aA9cQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327897573367:android:afc6602b5ecc7b499ef0f2",
+        "android_client_info": {
+          "package_name": "com.example.hortipricemobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvRg-Y7Fl-NjFDJ7xB_nPVClYP5-aA9cQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
